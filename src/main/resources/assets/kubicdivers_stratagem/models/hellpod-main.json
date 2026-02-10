@@ -1,0 +1,8 @@
+{
+  "loader": "forge:obj",
+  "model": "kubicdivers_stratagem:models/hellpod-main.obj",
+  "flip-v": true,
+  "textures": {
+    "hellpod-main-mtl": "kubicdivers_stratagem:block/hellpod-main"
+  }
+}

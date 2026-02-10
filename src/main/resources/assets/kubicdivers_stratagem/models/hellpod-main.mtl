@@ -1,0 +1,5 @@
+# Blender 4.5.5 LTS MTL File: 'hellpod.blend'
+# www.blender.org
+
+newmtl hellpod-main-mtl
+map_Kd kubicdivers_stratagem:block/hellpod-main
