@@ -31,7 +31,7 @@ public class GatlingBarrageStratagem extends AbstractStrikeStratagem {
     @Override
     public void tick(Level level, Vec3 targetPos, BeaconEntity beacon, int tick) {
         if (tick % 2 == 0) {
-            strikeRandomInRadius(level, targetPos, 5.0f, 1.0f, false, Level.ExplosionInteraction.NONE);
+            strikeRandomInRadius(level, beacon, targetPos, 5.0f, 1.0f, false, Level.ExplosionInteraction.NONE);
         }
     }
 }

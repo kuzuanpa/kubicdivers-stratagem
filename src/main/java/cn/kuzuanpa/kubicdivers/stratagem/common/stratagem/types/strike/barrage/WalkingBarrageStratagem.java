@@ -53,7 +53,7 @@ public class WalkingBarrageStratagem extends AbstractStrikeStratagem {
             for (int i = -1; i <= 1; i++) {
                 Vec3 scatterPos = new Vec3((int)(currentCenter.x + i * sdx * 4.0), currentCenter.y, (int)(currentCenter.z + i * sdz * 4.0));
 
-                strikeRandomInRadius(level, scatterPos, 2.5f, 4.5f, false, Level.ExplosionInteraction.TNT);
+                strikeRandomInRadius(level, beacon, scatterPos, 2.5f, 4.5f, false, Level.ExplosionInteraction.TNT);
             }
 
         }

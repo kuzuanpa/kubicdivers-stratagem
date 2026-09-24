@@ -34,6 +34,6 @@ public class Barrage120mmStratagem extends AbstractStrikeStratagem {
     @Override public int getDuration() { return 300; }
     @Override
     public void tick(Level level, Vec3 targetPos, BeaconEntity beacon, int tick) {
-        if (tick % 12 == 0) strikeRandomInRadius(level, targetPos, 12.0f, 4.0f, false, Level.ExplosionInteraction.TNT);
+        if (tick % 12 == 0) strikeRandomInRadius(level, beacon, targetPos, 12.0f, 4.0f, false, Level.ExplosionInteraction.TNT);
     }
 }

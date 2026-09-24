@@ -34,7 +34,7 @@ public class FireBarrageStratagem extends AbstractStrikeStratagem {
     @Override
     public void tick(Level level, Vec3 targetPos, BeaconEntity beacon, int tick) {
         if (tick % 15 == 0) {
-            strikeRandomInRadius(level, targetPos, 15.0f, 3.5f, true, Level.ExplosionInteraction.TNT);
+            strikeRandomInRadius(level, beacon, targetPos, 15.0f, 3.5f, true, Level.ExplosionInteraction.TNT);
         }
     }
 }

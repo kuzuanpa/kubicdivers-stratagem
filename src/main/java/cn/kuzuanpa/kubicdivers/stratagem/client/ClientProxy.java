@@ -2,6 +2,7 @@ package cn.kuzuanpa.kubicdivers.stratagem.client;
 
 import cn.kuzuanpa.kubicdivers.stratagem.KubicdiversStratagemMod;
 import cn.kuzuanpa.kubicdivers.stratagem.client.renderer.*;
+import cn.kuzuanpa.kubicdivers.stratagem.client.renderer.model.SentryRenderer;
 import cn.kuzuanpa.kubicdivers.stratagem.common.ModEntities;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -21,7 +22,18 @@ public class ClientProxy {
         event.registerEntityRenderer(ModEntities.STRATAGEM_BALL.get(), StratagemBallRenderer::new);
         event.registerEntityRenderer(ModEntities.BEACON.get(), BeaconRenderer::new);
         event.registerEntityRenderer(ModEntities.HELLPOD.get(), HellpodRenderer::new);
-        event.registerEntityRenderer(ModEntities.MACHINE_GUN_TURRET.get(), TurretRenderer::new);
         event.registerEntityRenderer(ModEntities.AP_MINE.get(), MineRenderer::new);
+        event.registerEntityRenderer(ModEntities.GUN_SENTRY.get(), SentryRenderer::new);
+        event.registerEntityRenderer(ModEntities.GATLING_SENTRY.get(), SentryRenderer::new);
+        event.registerEntityRenderer(ModEntities.CANNON_SENTRY.get(), SentryRenderer::new);
+        event.registerEntityRenderer(ModEntities.ROCKET_SENTRY.get(), SentryRenderer::new);
+        event.registerEntityRenderer(ModEntities.EMS_MORTAR_SENTRY.get(), SentryRenderer::new);
+        event.registerEntityRenderer(ModEntities.MORTAR_SENTRY.get(), SentryRenderer::new);
+
+        event.registerEntityRenderer(ModEntities.ORBITAL_BULLET.get(), OrbitalBulletRenderer::new);
+        event.registerEntityRenderer(ModEntities.SENTRY_BULLET.get(), SentryBulletRenderer::new);
+        event.registerEntityRenderer(ModEntities.ROCKET_PROJECTILE.get(), SentryBulletRenderer::new);
+        event.registerEntityRenderer(ModEntities.MORTAR_SHELL_EMS.get(), SentryBulletRenderer::new);
+        event.registerEntityRenderer(ModEntities.MORTAR_SHELL.get(), SentryBulletRenderer::new);
     }
 }

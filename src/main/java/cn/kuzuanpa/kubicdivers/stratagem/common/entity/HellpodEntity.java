@@ -6,11 +6,14 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 
@@ -96,6 +99,25 @@ public class HellpodEntity extends Entity {
         this.targetHeight = nbt.getInt("targetHeight");
     }
 
+    @Override
+    public boolean isPushedByFluid(FluidType type) {
+        return false;
+    }
+
+    @Override
+    public void thunderHit(ServerLevel level, LightningBolt lightning) {
+    }
+    @Override
+    public void setDeltaMovement(Vec3 motion) {
+        if (landTime > 0) {
+            super.setDeltaMovement(Vec3.ZERO);
+        }
+        super.setDeltaMovement(motion);
+    }
+    @Override
+    public boolean ignoreExplosion() {
+        return true;
+    }
     @Override
     protected void addAdditionalSaveData(CompoundTag nbt) {
         nbt.putInt("LifeTicks", this.age);

@@ -50,7 +50,7 @@ public abstract class AbstractHellpodStratagem implements IStratagem {
         if (!level.isClientSide) {
             if(beacon.hellpod == null)return;
 //createHellpodPad(level, targetPos);
-            Entity entity = createEntityForPad(level, targetPos);
+            Entity entity = createEntityOnPod(level, targetPos);
             if (entity != null) {
                 level.addFreshEntity(entity);
                 entity.startRiding(beacon.hellpod);
@@ -61,7 +61,7 @@ public abstract class AbstractHellpodStratagem implements IStratagem {
     }
 
     @Nullable
-    public abstract Entity createEntityForPad(Level level, Vec3 padPos);
+    public abstract Entity createEntityOnPod(Level level, Vec3 padPos);
 
     protected ItemFrame createItemFrame(Level level, Vec3 pos, ItemStack item) {
         ItemFrame itemFrame = new ItemFrame(EntityType.ITEM_FRAME, level);

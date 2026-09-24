@@ -34,7 +34,7 @@ public class WeaponHellpodStratagem extends AbstractHellpodStratagem {
 
     @Nullable
     @Override
-    public Entity createEntityForPad(Level level, Vec3 padPos) {
+    public Entity createEntityOnPod(Level level, Vec3 padPos) {
         return createItemFrame(level, padPos, weaponItem);
     }
 }

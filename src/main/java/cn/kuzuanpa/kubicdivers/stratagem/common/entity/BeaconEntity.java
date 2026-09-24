@@ -168,6 +168,11 @@ public class BeaconEntity extends Entity implements IKubicDiverHUD {
     }
 
     @Override
+    public boolean save(@NotNull CompoundTag p_20224_) {
+        return false;
+    }
+
+    @Override
     public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }

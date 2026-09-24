@@ -36,7 +36,7 @@ public class AntiPersonnelMineStratagem extends AbstractHellpodStratagem {
 
     @Nullable
     @Override
-    public Entity createEntityForPad(Level level, Vec3 padPos) {
+    public Entity createEntityOnPod(Level level, Vec3 padPos) {
         APMineEntity mine = new APMineEntity(level);
         mine.setPos(padPos.x + 0.5, padPos.y, padPos.z + 0.5);
 

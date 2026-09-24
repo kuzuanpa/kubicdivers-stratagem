@@ -87,7 +87,7 @@ public class StratagemManager {
         );
         register(
                 ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "auto_aim_strike"),
-                AutoAimStrikeStratagem::new
+                RailcannonStrikeStratagem::new
         );
         register(
                 ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "ems_strike"),
@@ -102,8 +102,28 @@ public class StratagemManager {
 
     private static void registerHellpodStratagems() {
         register(
-                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "machine_gun_turret"),
-                MachineGunTurretStratagem::new
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "gatling_sentry"),
+                GatlingSentryStratagem::new
+        );
+        register(
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "gun_sentry"),
+                GunSentryStratagem::new
+        );
+        register(
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "cannon_sentry"),
+                CannonSentryStratagem::new
+        );
+        register(
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "rocket_sentry"),
+                RocketSentryStratagem::new
+        );
+        register(
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "ems_mortar_sentry"),
+                EMSMortarSentryStratagem::new
+        );
+        register(
+                ResourceLocation.fromNamespaceAndPath(KubicdiversStratagemMod.MOD_ID, "mortar_sentry"),
+                MortarSentryStratagem::new
         );
 
         register(
